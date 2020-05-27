@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bukwild Front-end Dev Test | Sam Miller</title>
+	<link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-gray-900" style="font-family: 'Helvetica Neue';">
+	<div id="app" class="relative">
+
+		<div class="container mx-auto h-full min-h-screen flex flex-col space-y-32 justify-between">
+			<layout-ui></layout-ui>
+			<transition>
+				<router-view></router-view>
+			</transition>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+	<script src="js/output.js"></script>
+</body>
+</html>
