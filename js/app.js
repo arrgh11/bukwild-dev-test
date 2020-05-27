@@ -25,41 +25,7 @@ for (var page in data.pages) {
 	  	}
 	}
 	routes.push(obj);
-	console.log(data.pages[page]);
 }
-
-// const routes = [
-//   { 
-//   	path: '/industries', 
-//   	component: PageUI,
-//   	props: {
-//   		headline: "Industries",
-// 		subhead: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-// 		cta: "Vestibulum id ligula porta felis euismod semper.",
-// 		background: "slide_one.jpg"
-//   	}
-//   },
-//   { 
-//   	path: '/services', 
-//   	component: PageUI,
-//   	props: {
-//   		headline: "Services",
-// 		subhead: "Cras mattis consectetur purus sit amet fermentum.",
-// 		cta: "Donec id elit non mi porta gravida at eget metus.",
-// 		background: "slide_two.jpg"
-//   	}
-//   },
-//   { 
-//   	path: '/about-us', 
-//   	component: PageUI,
-//   	props: {
-//   		headline: "Maecenas sed diam eget risus varius blandit sit amet non magna",
-// 		subhead: "Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.",
-// 		cta: "Nullam quis risus eget urna mollis ornare vel eu leo.",
-// 		background: "slide_three.jpg"
-//   	}
-//   },
-// ]
 
 const router = new VueRouter({
 	mode: 'history',
@@ -76,11 +42,8 @@ let event = new CustomEvent("fade", {
 });
 
 function initE() {
-	
 
 	window.dispatchEvent(event);
-
-	console.log('called');	
 
 }
 
@@ -105,4 +68,4 @@ router.afterEach((to, from) => {
 
 router.onReady(initE);
 
-// router.push({ path: '/'+data.pages[0]['slug'] })
+router.push('/'+data.pages[0]['slug']);
