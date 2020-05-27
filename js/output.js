@@ -545,8 +545,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "lg:ml-auto lg:px-10 text-sm font-light leading-loose transition-all duration-300 delay-150 ease-in-out transform",
-              staticStyle: { "max-width": "440px" },
+                "lg:ml-auto lg:px-10 text-sm font-light leading-loose transition-all duration-300 delay-150 ease-in-out transform max-w-lg",
               attrs: {
                 "x-bind:class":
                   "show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'"
@@ -561,13 +560,14 @@ var render = function() {
         "div",
         {
           staticClass:
-            "bg-white h-48 px-20 flex flex-col justify-center relative z-10"
+            "bg-white h-48 px-20 lg:pl-20 lg:pr-0 flex flex-col justify-center relative z-10"
         },
         [
           _c(
             "div",
             {
-              staticClass: "grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"
+              staticClass:
+                "grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 items-center"
             },
             [
               _c(
@@ -587,10 +587,10 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "text-center text-xs font-medium uppercase leading-relaxed tracking-widest "
+                    "text-center lg:text-left w-full lg:max-w-lg text-xs font-medium uppercase leading-relaxed tracking-widest lg:ml-auto px-0 lg:px-10"
                 },
                 [
-                  _c("div", { staticClass: "inline-flex items-center" }, [
+                  _c("div", { staticClass: "inline-flex items-center " }, [
                     _vm._v("\n\t\t\t\t\tlet's talk.\n\t\t\t\t\t"),
                     _c("div", { staticClass: "text-bukwild-yellow" }, [
                       _c(

@@ -5,17 +5,17 @@
 			<div class="font-bold text-5xl lg:text-7xl leading-none tracking-tight transition-all duration-300 ease-in-out transform" x-bind:class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'">
 				{{headline}}
 			</div>
-			<div class="lg:ml-auto lg:px-10 text-sm font-light leading-loose transition-all duration-300 delay-150 ease-in-out transform" x-bind:class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'" style="max-width:440px">
+			<div class="lg:ml-auto lg:px-10 text-sm font-light leading-loose transition-all duration-300 delay-150 ease-in-out transform max-w-lg" x-bind:class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'">
 				{{subhead}}
 			</div>
 		</div>
-		<div class="bg-white h-48 px-20 flex flex-col justify-center relative z-10">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+		<div class="bg-white h-48 px-20 lg:pl-20 lg:pr-0 flex flex-col justify-center relative z-10">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-0 items-center">
 				<div class="font-bold text-2xl leading-snug tracking-tight transform transition-all ease-in-out duration-150 delay-100" x-bind:class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'">
 					{{cta}}
 				</div>
-				<div class="text-center text-xs font-medium uppercase leading-relaxed tracking-widest ">
-					<div class="inline-flex items-center">
+				<div class="text-center lg:text-left w-full lg:max-w-lg text-xs font-medium uppercase leading-relaxed tracking-widest lg:ml-auto px-0 lg:px-10">
+					<div class="inline-flex items-center " >
 						let's talk.
 						<div class="text-bukwild-yellow">
 							<svg class="w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
