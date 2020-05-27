@@ -115,57 +115,25 @@ for (var page in data.pages) {
     }
   };
   routes.push(obj);
-  console.log(data.pages[page]);
-} // const routes = [
-//   { 
-//   	path: '/industries', 
-//   	component: PageUI,
-//   	props: {
-//   		headline: "Industries",
-// 		subhead: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
-// 		cta: "Vestibulum id ligula porta felis euismod semper.",
-// 		background: "slide_one.jpg"
-//   	}
-//   },
-//   { 
-//   	path: '/services', 
-//   	component: PageUI,
-//   	props: {
-//   		headline: "Services",
-// 		subhead: "Cras mattis consectetur purus sit amet fermentum.",
-// 		cta: "Donec id elit non mi porta gravida at eget metus.",
-// 		background: "slide_two.jpg"
-//   	}
-//   },
-//   { 
-//   	path: '/about-us', 
-//   	component: PageUI,
-//   	props: {
-//   		headline: "Maecenas sed diam eget risus varius blandit sit amet non magna",
-// 		subhead: "Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.",
-// 		cta: "Nullam quis risus eget urna mollis ornare vel eu leo.",
-// 		background: "slide_three.jpg"
-//   	}
-//   },
-// ]
+} // routes.push({
+//     path :'*',
+//     component: PageUI,
+// });
 
 
 var router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   routes: routes
 });
 var app = new Vue({
   router: router
 }).$mount('#app');
-var event = new CustomEvent("hey", {
-  detail: {
-    foo: 'bar'
-  }
+var event = new CustomEvent("fade", {
+  detail: {}
 });
 
 function initE() {
   window.dispatchEvent(event);
-  console.log('called');
 }
 
 router.beforeEach(function (to, from, next) {
@@ -181,9 +149,7 @@ router.afterEach(function (to, from) {
   }, 600);
 });
 router.onReady(initE);
-router.push({
-  path: '/' + data.pages[0]['slug']
-});
+router.push('/' + data.pages[0]['slug'], function () {});
 
 /***/ }),
 
@@ -552,7 +518,7 @@ var render = function() {
     "div",
     {
       staticClass: "flex-grow flex h-full flex-col space-y-32 justify-end",
-      attrs: { "x-data": "{show:false}", "x-on:hey.window": "show = !show" }
+      attrs: { "x-data": "{show:false}", "x-on:fade.window": "show = !show" }
     },
     [
       _c(

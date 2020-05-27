@@ -7,11 +7,7 @@ import PageUI from './components/PageUI.vue'
 
 let data = require('./content.json');
 
-let routes = [
-	{ path: '/', redirect: to => {
-		return '/'+data.pages[0]['slug']
-    }}
-];
+let routes = [];
 
 for (var page in data.pages) {
 	let obj = {
@@ -27,8 +23,13 @@ for (var page in data.pages) {
 	routes.push(obj);
 }
 
+// routes.push({
+//     path :'*',
+//     component: PageUI,
+// });
+
 const router = new VueRouter({
-	mode: 'history',
+	// mode: 'history',
 	routes
 });
 
@@ -68,4 +69,4 @@ router.afterEach((to, from) => {
 
 router.onReady(initE);
 
-router.push('/');
+router.push('/'+data.pages[0]['slug'], ()=>{});
