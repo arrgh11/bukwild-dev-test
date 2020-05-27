@@ -105,3 +105,4 @@ router.afterEach((to, from) => {
 
 router.onReady(initE);
 
+router.push({ path: '/'+data.pages[0]['slug'] })
